@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link href="styles.css" rel="stylesheet">
+	<title>Multiplication Table</title>
+</head>
+<body class="container">
+<div id="main">
+  <form ="input-form">
+    <h2>Enter first multiple:</h2>
+    <input id="row#" type="number" v-model.number="numberOfRows"
+    size="5" min="0" max="50">
+    <h2>Enter second multiple:</h2>
+    <input id="column#" type="number" v-model.number="numberOfColumns"
+    size="5" min="0" max="50">
+  </form>
+
+<div id=#grid-template>
+    <table>
+      <tr>
+        <th>X</th>
+        <th v-for = "col in numberOfColumns">
+          {{columns}}
+        </th>
+      </tr>
+      <tr>
+        <th>X</th>
+        <th v-for = "row in numberOfRows">
+          {{rows}}
+        </th>
+        <td v-for"col in numberOfColumns">
+          {{rows * columns}}
+      </tr>
+    </table>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
